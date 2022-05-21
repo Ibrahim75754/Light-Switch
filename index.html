@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On/Off</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="text-center">
+        <p>Turn the light on and off by clicking the bulb!</p>
+        <img id="myImage" onclick="LightOnOff()" src="./assets/img/pic_bulbOff.gif" width="100" height="180">
+        
+    </div>
+
+    <script>
+        function LightOnOff() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("bulbOn")) {
+                image.src = "./assets/img/pic_bulbOff.gif";
+            } else {
+                image.src = "./assets/img/pic_bulbOn.gif";
+            }
+        }
+    </script>
+</body>
+</html>
